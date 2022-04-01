@@ -1,0 +1,747 @@
+@charset "UTF-8";
+/* ----------css reset start---------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ----------css reset end---------- */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+*, *:before, *:after {
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 32px;
+}
+
+.mb-5 {
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+@media (max-width: 678px) {
+  .container {
+    margin: 0 15px;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 9px 0;
+}
+
+.header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .logo a {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png");
+  width: 128px;
+  height: 38px;
+  display: block;
+  text-indent: 101%;
+  /*首行縮排*/
+  overflow: hidden;
+  /*自動隱藏超出的文字或圖片*/
+  white-space: nowrap;
+  /*使元素在第一排上面，不斷行*/
+}
+
+.header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .menu a {
+  font-size: 20px;
+  color: #8D8D8D;
+  display: block;
+  margin-left: 32px;
+}
+
+.header .menu a:hover {
+  color: #E0E0E0;
+}
+
+.header .menu .material-icons {
+  font-size: 20px;
+  vertical-align: text-top;
+}
+
+@media (max-width: 678px) {
+  .header .menu {
+    /*隱藏選單開始*/
+    max-height: 0px;
+    overflow: hidden;
+    /*隱藏選單結束*/
+  }
+}
+
+.header .cart {
+  display: none;
+}
+
+@media (max-width: 678px) {
+  .header .cart {
+    display: block;
+    position: relative;
+    margin-right: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .cart span {
+    color: #707070;
+  }
+  .header .cart em {
+    width: 16px;
+    height: 13px;
+    border-radius: 7px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 13px;
+    color: white;
+    display: block;
+    background-color: #916000;
+    position: absolute;
+    top: 2px;
+    right: -5px;
+  }
+}
+
+.header .menu2 {
+  position: absolute;
+  max-height: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 678px) {
+  .header .menu2 {
+    -webkit-transition: max-height 2.3s;
+    transition: max-height 2.3s;
+    z-index: 100;
+    /*header 80px+1px boder 線條*/
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: #707070;
+  }
+  .header .menu2 li {
+    border-bottom: 1px solid white;
+  }
+  .header .menu2 li a {
+    display: block;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color: white;
+    font-size: 20px;
+    padding: 16px 0;
+    text-align: center;
+  }
+  .header .menu2 li a:hover {
+    background: white;
+    color: #707070;
+  }
+}
+
+.header .showmenu {
+  display: none;
+}
+
+@media (max-width: 678px) {
+  .header .showmenu {
+    display: block;
+  }
+  .header .showmenu a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .showmenu span {
+    display: block;
+    font-size: 38px;
+    color: #707070;
+  }
+}
+
+@media (max-width: 678px) {
+  .menu-show .menu2 {
+    /*jQ點擊後動態在 body 加上 class */
+    max-height: 500px;
+  }
+}
+
+.banner1 {
+  background-image: url(../img/index1.jpg);
+  background-attachment: fixed;
+  height: 870px;
+  color: white;
+  margin-bottom: 60px;
+}
+
+.banner1 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.banner1 .container .text {
+  max-width: 445px;
+  padding-top: 295px;
+}
+
+.banner1 h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.banner1 p {
+  font-size: 24px;
+}
+
+.banner1 button {
+  color: white;
+  border: 2px solid #FFFFFF;
+  border-radius: 30px;
+  background-color: transparent;
+  font-size: 28px;
+  line-height: 1.5;
+  padding: 7px 111px;
+}
+
+.banner1 button:hover {
+  background: #FFFFFF4D;
+  cursor: pointer;
+}
+
+@media (max-width: 678px) {
+  .banner1 {
+    height: 480px;
+    margin-bottom: 40px;
+  }
+  .banner1 .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .banner1 .container .text {
+    max-width: 345px;
+    padding-top: 101px;
+  }
+  .banner1 h2 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .banner1 p {
+    font-size: 20px;
+  }
+  .banner1 button {
+    padding: 7px 108px;
+  }
+}
+
+.product-intro {
+  margin-bottom: 60px;
+}
+
+.product-intro li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-intro li .text {
+  max-width: 350px;
+}
+
+.product-intro li h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.product-intro li h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.product-intro li p {
+  font-size: 20px;
+}
+
+.product-intro li span {
+  color: #AC8A46;
+}
+
+.product-intro li button {
+  font-size: 20px;
+  line-height: 1.5;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid #000000;
+  padding: 13px 59px;
+  margin-top: 8px;
+}
+
+.product-intro li button:hover {
+  background-color: #0000000D;
+  cursor: pointer;
+}
+
+.product-intro li .photo1, .product-intro li .photo2, .product-intro li .photo3, .product-intro li .photo4 {
+  height: 555px;
+  width: 50%;
+}
+
+.product-intro li .photo1 {
+  background-image: url(../img/index2.jpg);
+}
+
+.product-intro li .photo2 {
+  background-image: url(../img/index3.png);
+}
+
+.product-intro li .photo3 {
+  background-image: url(../img/index4.jpg);
+  background-position: left;
+}
+
+.product-intro li .photo4 {
+  background-image: url(../img/index5.jpg);
+  height: 1080px;
+}
+
+.product-intro li:nth-child(4) p {
+  font-size: 16px;
+  margin-bottom: 52px;
+}
+
+@media (max-width: 678px) {
+  .product-intro li {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .product-intro li .text {
+    max-width: 345px;
+  }
+  .product-intro li .text p {
+    margin-bottom: 8px;
+  }
+  .product-intro li .photo1, .product-intro li .photo2, .product-intro li .photo3, .product-intro li .photo4 {
+    height: 350px;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .product-intro li .photo4 {
+    height: 680px;
+  }
+  .product-intro li:nth-child(4) p {
+    margin-bottom: 20px;
+  }
+  .product-intro li button {
+    padding: 13px 57px;
+    margin: 0;
+  }
+}
+
+.product-intro .rowReverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.product-intro .product-text {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 678px) {
+  .product-intro .product-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 678px) {
+  .product-intro {
+    margin-bottom: 40px;
+  }
+}
+
+.product-list {
+  background: #E0E0E0;
+  padding: 40px 0;
+  margin-bottom: 60px;
+}
+
+.product-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product-list ul li {
+  width: 31.5315%;
+}
+
+.product-list h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product-list span {
+  color: #8D8D8D;
+  text-decoration: line-through;
+}
+
+.product-list .photo1, .product-list .photo2, .product-list .photo3 {
+  height: 540px;
+}
+
+.product-list .photo1 {
+  background-image: url(../img/index6.jpg);
+}
+
+.product-list .photo2 {
+  background-image: url(../img/index7.jpg);
+}
+
+.product-list .photo3 {
+  background-image: url(../img/index8.jpg);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-list .photo3 p {
+  max-width: 160px;
+  position: absolute;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+
+.product-list .photo3 .soldOut {
+  background-image: url(../img/photo-1559264730-1533a6ec0433.svg);
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 678px) {
+  .product-list {
+    padding: 32px 0 0;
+    margin-bottom: 40px;
+  }
+  .product-list ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .product-list ul li {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .product-list ul p {
+    margin-bottom: 4px;
+  }
+  .product-list .photo1, .product-list .photo2, .product-list .photo3 {
+    height: 350px;
+  }
+  .product-list .photo1, .product-list .photo2 {
+    background-position: center bottom;
+  }
+}
+
+.product-recycle {
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-recycle .photo {
+  background-image: url(../img/index9.jpg);
+  width: 65.765765%;
+  height: 520px;
+}
+
+.product-recycle .text {
+  width: 31.5315%;
+}
+
+.product-recycle .text h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.product-recycle .text p {
+  font-size: 20px;
+}
+
+.product-recycle .text span {
+  display: block;
+}
+
+.product-recycle .text a {
+  color: #AC8A46;
+}
+
+@media (max-width: 678px) {
+  .product-recycle {
+    margin-bottom: 32px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .product-recycle .photo {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .product-recycle .text {
+    width: 100%;
+  }
+  .product-recycle .text p, .product-recycle .text span {
+    margin-bottom: 8px;
+  }
+}
+
+.banner2 {
+  background-image: url(../img/index10.jpg);
+  height: 600px;
+}
+
+.banner2 .text {
+  padding-top: 312px;
+}
+
+.banner2 h3 {
+  font-size: 32px;
+  color: #8D8D8D;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.banner2 form {
+  font-size: 0;
+  max-width: 350px;
+}
+
+.banner2 input {
+  width: 62.5%;
+  font-size: 16px;
+  padding: 19px 57px 19px 16px;
+  border: 2px solid #916000;
+  border-radius: 4px 0 0 4px;
+  margin: 0;
+}
+
+.banner2 input[type="submit"] {
+  width: 37.5%;
+  background-color: #916000;
+  color: white;
+  padding: 19px 27px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.banner2 input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #916000;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0 22px;
+}
+
+.footer .logo_rights {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .logo_rights a {
+  display: block;
+  width: 128px;
+  height: 38px;
+  margin-right: 20px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfumewhite.png");
+}
+
+.footer .logo_rights p {
+  color: white;
+  font-size: 14px;
+}
+
+.footer .bottom-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .bottom-menu a {
+  display: block;
+  margin-left: 36px;
+  color: white;
+  font-size: 20px;
+}
+
+.footer .bottom-menu a:hover {
+  color: #8D8D8D;
+}
+
+@media (max-width: 678px) {
+  .footer .bottom-menu {
+    display: none;
+  }
+}

@@ -1,0 +1,47 @@
+<!-- 
+Luna助教給的建議
+1.  請在 body 統一設定大部分行高、字體、字體大小，再針對不同行高、字體大小額外設定，例如大部分內文為 1.5，標題的行高為 1.2，避免寫重複的樣式設定
+2.  .content .text 不要設定寬度，請讓文字自適應大小，並將 216 * 216 外層 div 移除
+3.  移除後圖片有被拉長的狀況，請設定 .content 的 align-items，改變 flex 對齊方式就不會被拉長囉
+4.  請依照設計稿讓內容不超過 3 行，就不會影響區塊高度
+5.  請移除沒有設定樣式的 class 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pixel perfect kata</title>
+
+    <link rel="stylesheet" href="css/all.css">
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">
+            <ul>
+                <li>
+                    <img src="https://fakeimg.pl/96x96/" alt="">
+                    <div class="text">
+                        <h1>Lorem, ipsum dolor.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nulla in neque quos aliquam facilis.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://fakeimg.pl/96x96/" alt="">
+                    <div class="text">
+                        <h1>Lorem, ipsum dolor.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi consequatur officia adipisci exercitationem ratione temporibus!</p>
+                    </div>
+                </li>
+            </ul>
+            <img src="https://fakeimg.pl/216x216/" alt="">
+        </div>
+        <div class="footer">
+            <p>表尾文字</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,498 @@
+// import
+@import 'reset';
+@import 'text-hidden';
+@import 'RWD';
+
+*, *:before, *:after{
+    background-size: cover;
+    background-position: center;
+}
+
+// variables
+$mb: 8px;
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.mb-1{
+    margin-bottom: $mb;
+}
+.mb-2{
+    margin-bottom: $mb * 2;
+}
+.mb-4{
+    margin-bottom: $mb * 4;
+}
+.mb-5{
+    margin-bottom: $mb * 5;
+}
+
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    @include mobile(){
+        margin: 0 15px;
+    }
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 0;
+    .logo{
+        display: flex;
+        align-items: center;
+        a{
+            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png");
+            width: 128px;
+            height: 38px;
+            @include text-hidden;
+        }
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        a{
+            font-size: 20px;
+            color: #8D8D8D;
+            display: block;
+            margin-left: 32px;
+            &:hover{
+                color: #E0E0E0;
+            }
+        }
+        .material-icons{
+            font-size: 20px;
+            vertical-align: text-top;
+        }
+        @include mobile(){
+            /*隱藏選單開始*/
+            max-height: 0px;
+            overflow: hidden;
+            /*隱藏選單結束*/
+        }
+    }
+    .cart{
+        display: none;
+        @include mobile(){
+            display: block;
+            position: relative;
+            margin-right: 30px;
+            display: flex;
+            align-items: center;
+            span{
+                color: #707070;
+            }
+            em{
+                width: 16px;
+                height: 13px;
+                border-radius: 7px;
+                font-size: 12px;
+                text-align: center;
+                line-height: 13px;
+                color: white;
+                display: block;
+                background-color: #916000;
+                position: absolute;
+                top: 2px;
+                right: -5px;
+            }
+        }
+    }
+    .menu2{
+        position: absolute;
+        max-height: 0;
+        overflow: hidden;
+        @include mobile(){
+            transition: max-height 2.3s;
+            z-index: 100;
+            /*header 80px+1px boder 線條*/
+            top: 56px;
+            left: 0;
+            right: 0;
+            background: #707070;
+            li{
+                border-bottom: 1px solid white;
+                a{
+                    display: block;
+                    transition: all 0.3s;
+                    color: white;
+                    font-size: 20px;
+                    padding: 16px 0;
+                    text-align: center;
+                    &:hover{
+                        background: white;
+                        color: #707070;
+                    }
+                }
+            }
+        }
+    }
+    .showmenu{
+        display: none;
+        @include mobile(){
+            display: block;
+            a{
+                display: flex;
+                align-items: center;
+            }
+            span{
+                display: block;
+                font-size: 38px;
+                color: #707070;
+            }
+        }
+    }
+}
+@include mobile{
+    .menu-show .menu2{
+    /*jQ點擊後動態在 body 加上 class */
+    max-height: 500px;
+    }
+}
+.banner1{
+    background-image: url(../img/index1.jpg);
+    background-attachment: fixed;
+    height: 870px;
+    color: white;
+    margin-bottom: 60px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .text{
+            max-width: 445px;
+            padding-top: 295px;
+        }
+    }
+    h2{
+        font-size: 40px;
+        font-weight: bold;
+    }
+    p{
+        font-size: 24px;
+    }
+    button{
+        color: white;
+        border: 2px solid #FFFFFF;
+        border-radius: 30px;
+        background-color: transparent;
+        font-size: 28px;
+        line-height: 1.5;
+        padding: 7px 111px;
+        &:hover{
+            background: #FFFFFF4D;
+            cursor: pointer;
+        }
+    }
+    @include mobile(){
+        height: 480px;
+        margin-bottom: 40px;
+        .container{
+            align-items: center;
+            .text{
+                max-width: 345px;
+                padding-top: 101px;
+            }
+        }
+        h2{
+            font-size: 32px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 20px;
+        }
+        button{
+            padding: 7px 108px;
+        }
+    }
+}
+.product-intro{
+    margin-bottom: 60px;
+    li{
+        display: flex;
+        .text{
+            max-width: 350px;
+        }
+        h2{
+            font-size: 32px;
+            font-weight: bold;
+        }
+        h3{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        p{
+            font-size: 20px;
+        }
+        span{
+            color: #AC8A46;
+        }
+        button{
+            font-size: 20px;
+            line-height: 1.5;
+            background-color: transparent;
+            border-radius: 30px;
+            border: 2px solid #000000;
+            padding: 13px 59px;
+            margin-top: 8px;
+            &:hover{
+                background-color: #0000000D;
+                cursor: pointer;
+            }
+        }
+        .photo1, .photo2, .photo3, .photo4{
+            height: 555px;
+            width: 50%;
+        }
+        .photo1{
+            background-image: url(../img/index2.jpg);
+        }
+        .photo2{
+            background-image: url(../img/index3.png);
+        }
+        .photo3{
+            background-image: url(../img/index4.jpg);
+            background-position: left;
+        }
+        .photo4{
+            background-image: url(../img/index5.jpg);
+            height: 1080px;
+        }
+        &:nth-child(4){
+            p{
+                font-size: 16px;
+                margin-bottom: 52px;
+            }
+        }
+        @include mobile(){
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            .text{
+                max-width: 345px;
+                p{
+                    margin-bottom: 8px;
+                }
+            }
+            .photo1, .photo2, .photo3, .photo4{
+                height: 350px;
+                width: 100%;
+                margin-bottom: 8px;
+            }
+            .photo4{
+                height: 680px;
+            }
+            &:nth-child(4){
+                p{
+                    margin-bottom: 20px;
+                }
+            }
+            button{
+                padding: 13px 57px;
+                margin: 0;
+            }
+        }
+    }
+    .rowReverse{
+        flex-direction: row-reverse;
+    }
+    .product-text{
+        width: 50%;
+        display: flex;        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include mobile(){
+            width: 100%;
+        }
+    }
+    @include mobile(){
+        margin-bottom: 40px;
+    }
+}
+.product-list{
+    background: #E0E0E0;
+    padding: 40px 0;
+    margin-bottom: 60px;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+            width: 31.5315%;
+        }
+    }
+    h2{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    span{
+        color: #8D8D8D;
+        text-decoration: line-through;
+    }
+    .photo1, .photo2, .photo3{
+        height: 540px;
+    }
+    .photo1{
+        background-image: url(../img/index6.jpg);
+    }
+    .photo2{
+        background-image: url(../img/index7.jpg);
+    }
+    .photo3{
+        background-image: url(../img/index8.jpg);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            max-width: 160px;
+            position: absolute;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+        }
+        .soldOut{
+            background-image: url(../img/photo-1559264730-1533a6ec0433.svg);
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @include mobile(){
+        padding: 32px 0 0;
+        margin-bottom: 40px;
+        ul{
+            flex-wrap: wrap;
+            li{
+                width: 100%;
+                margin-bottom: 32px;
+            }
+            p{
+                margin-bottom: 4px;
+            }
+        }
+        .photo1, .photo2, .photo3{
+            height: 350px;
+        }
+        .photo1, .photo2{
+            background-position: center bottom;
+        }
+    }
+}
+.product-recycle{
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .photo{
+        background-image: url(../img/index9.jpg);
+        width: 65.765765%;
+        height: 520px;
+    }
+    .text{
+        width: 31.5315%;
+        h2{
+            font-size: 32px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 20px;
+        }
+        span{
+            display: block;
+        }
+        a{
+            color: #AC8A46;
+        }
+    }
+    @include mobile(){
+        margin-bottom: 32px;
+        flex-wrap: wrap;
+        .photo{
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        .text{
+            width: 100%;
+            p, span{
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+.banner2{
+    background-image: url(../img/index10.jpg);
+    height: 600px;
+    .text{
+        padding-top: 312px;
+    }
+    h3{
+        font-size: 32px;
+        color: #8D8D8D;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    form{
+        font-size: 0;
+        max-width: 350px;
+    }
+    input{
+        width: 62.5%;
+        font-size: 16px;
+        padding: 19px 57px 19px 16px;
+        border: 2px solid #916000;
+        border-radius: 4px 0 0 4px;
+        margin: 0;
+        &[type="submit"]{
+            width: 37.5%;
+            background-color: #916000;
+            color: white;
+            padding: 19px 27px;
+            border-radius: 0px 4px 4px 0px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+.footer{
+    background-color: #916000;   
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0 22px;
+    }
+    .logo_rights{
+        display: flex;
+        align-items: center;
+        a{
+            display: block;
+            width: 128px;
+            height: 38px;
+            margin-right: 20px;
+            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfumewhite.png");
+        }
+        p{
+            color: white; 
+            font-size: 14px;
+        }
+    }
+    .bottom-menu{
+        display: flex;
+        a{  
+            display: block;
+            margin-left: 36px;
+            color: white;
+            font-size: 20px;
+            &:hover{
+                color: #8D8D8D;
+            }
+        }
+        @include mobile(){
+            display: none;
+        }
+    }
+}

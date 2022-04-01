@@ -1,0 +1,116 @@
+@import 'reset';
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    h2{
+        font-size: 32px;
+        line-height: 43px;
+        border-bottom: 1px solid #000;
+        margin-bottom: 16px;
+        span{
+            color: #A00404;
+            font-size: 24px;
+        }
+    }
+    p{
+        font-size: 24px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+}
+.header{
+    .container{
+        border-bottom: 2px solid black;
+        margin-top: 37px;
+    }
+    h1{
+        font-size: 80px;
+        line-height: 106px;
+    }
+}
+.content1{
+    img{
+        margin: 48px 0;
+    }
+    .education{
+        margin: 72px 0;
+    }
+}
+.footer1{
+    background: #415165;
+    padding: 24px 0 12px;
+    h2{
+        text-align: center;
+        font-size: 32px;
+        line-height: 45px;
+        color: white;
+        margin: 0 auto;
+        max-width: 996px;
+        border-bottom: 1px solid white;
+        span{
+            font-size: 24px;
+            line-height: 1.5;
+        }
+    }
+    ul{
+        max-width: 220px;
+        margin: 36px auto;        
+        padding-left: 24px;
+        border-left: 1px solid #96A9C4;
+    }
+    li{
+        color: white;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 16px;
+    }
+}
+.content2{
+    padding: 72px 0 48px;
+    .workExp{
+        margin-left: 24px;
+        padding-left: 24px;
+        border-left: 1px solid #96a9c4;
+        img{
+            margin-bottom: 8px;
+        }
+        .intro{
+            max-width: 642px;
+            font-size: 20px;
+        }
+        :nth-child(1), :nth-child(7){
+            margin-bottom: 0;
+        }
+    }
+}
+.footer2{
+    background: #415165;
+    padding: 24px 0;
+    text-align: center;
+    h2{
+        max-width: 996px;
+        margin: 0 auto 32px;
+        font-size: 32px;
+        line-height: 45px;
+        color: white;
+        border-bottom: 1px solid white;
+        span{
+            font-size: 24px;
+            line-height: 1.5;
+        }
+    }
+    li{
+        color: white;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 16px;
+    }
+    .icon{
+        display: flex;
+        justify-content: center;
+        li{
+            padding: 0 12px;
+        }
+    }
+}

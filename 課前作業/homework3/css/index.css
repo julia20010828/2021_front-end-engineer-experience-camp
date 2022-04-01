@@ -1,0 +1,454 @@
+/* ----------css reset start---------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ----------css reset stop---------- */
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.wrap{
+    margin: 0 auto;
+    max-width: 1024px;
+}
+.header{
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 420px;
+    background-image: url(https://upload.cc/i1/2021/06/26/kLciSX.png);
+}
+.header .topbar{
+    background: rgba(0,0,0,0.75);
+    padding: 0 2.5em;
+    display: flex;
+    justify-content: space-between;
+}
+.topbar .menu{
+    display: flex;
+}
+.topbar .menu a{
+    padding: 18px 1em;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.header .showmenu{
+    display: none;
+}
+.header .topcontent{
+    text-align: center;
+    margin: 67px auto 0 auto;
+    max-width: 460px;
+    background: rgba(0,0,0,0.35);
+}
+.topcontent h1{
+    padding: 20px 0;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+.topcontent p{
+    line-height: 1.3;
+    padding-bottom: 20px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+@media (max-width: 569px){
+    .header{
+        background-image: url(https://upload.cc/i1/2021/06/27/EQdVm8.png);
+    }
+    .header .topbar{
+        padding: 0 1em;
+    }
+    .header .menu {
+        /*隱藏選單開始*/
+        max-height: 0px;
+        overflow: hidden;
+        /*隱藏選單結束*/
+        transition: max-height 2.3s;
+        margin-top: 1px;
+        /*絕對定位疊在網頁上*/
+        position: absolute;
+        z-index: 100;
+        /*header 80px+1px boder 線條*/
+        top: 47px;
+        left: 0;
+        right: 0;
+        background: #FFFFFF;
+    }
+    .topbar .menu{
+        display: block;
+    }
+    .header .menu li{
+        /* float: none; */
+        border-bottom: 1px dashed #0F222B;
+    }
+    .header .menu li a{
+        color: #0F222B;
+        transition: all 0.3s;
+    }
+    .header .menu li a:hover{
+        background: #69CA62;
+        color: #fff;
+    }
+    .header .showmenu{
+        display: block;
+        float: right;
+        margin: 1em;        
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    /*jQ點擊後動態在 body 加上 class */
+    .menu-show .menu{
+        max-height: 500px
+    }
+}
+.content .intro{
+    background-color: #EFE9E7;
+}
+.content .intro .title h2{
+    padding: 50px 0;
+    text-align: center;
+    font-size: 20px;
+    color: #3D1101;
+    line-height: 32px;
+}
+.content .intro ul{
+    display: flex;
+    padding-bottom: 50px;
+}
+.content .intro li{
+    width: 33.3333%;
+}
+.content .intro img{
+    display: block;
+    margin: 0 auto;
+}
+.content .intro h3{    
+    padding: 20px 0 11px;
+    text-align: center;
+    font-size: 18px;
+    color: #3D1101;
+}
+.content .intro p{
+    margin: 0 auto;
+    max-width: 260px;
+    font-size: 16px;
+    color: #3D1101;
+}
+@media (max-width: 768px) {
+    .content .intro p{
+        max-width: 196px;
+    }
+}
+@media (max-width: 569px){
+    .content .intro ul{
+        display: block;
+        padding-bottom: 10px;
+    }
+    .content .intro li{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .content .intro p{
+        max-width: 260px;
+    }
+}
+.content .chef{
+    display: flex;
+    background-color: #3D1101;
+}
+.content .cheftext{
+    /* width: 50%; */
+    max-width: 410px;
+    padding: 80px 1.5em 0;
+}
+.content .chef img{
+    width: 50%;
+    margin-left: 2.5em;
+}
+.content .cheftext h4{
+    font-size: 20px;
+    color: #EFE9E7;
+    line-height: 32px;
+}
+.content .cheftext p{
+    line-height: 1.2;
+    font-size: 16px;
+    color: #EFE9E7;
+    margin-bottom: 1em;
+}
+@media (max-width: 768px){
+    .content .chef img{
+        margin-left: 1em;
+    }
+    .content .cheftext{
+        max-width: 330px;
+        padding: 1em 1.5em 0;
+    }
+}
+@media (max-width: 569px){
+    .content .chef{
+        display: block;
+    }
+    .content .chef img{
+        width: 100%;
+        margin: 0;
+    }
+    .content .cheftext{
+        max-width: 260px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+}
+.content .opinion{
+    background-color: #EFE9E7;
+}
+.content .opinion .title h2{
+    text-align: center;
+    padding: 50px 0;
+    font-size: 24px;
+    color: #3D1101;
+}
+.content .opinion ul{
+    padding: 0 2.5%;
+    display: flex;
+}
+.content .opinion li{
+    margin: 0 1.5%;
+    width: 30.3333%;
+}
+.content .opinionperson{
+    display: flex;
+    /* justify-content: center; */
+}
+.content .opinionperson h5{
+    margin-left: 1em;
+    font-size: 18px;
+    color: #3D1101;
+    line-height: 67px;
+}
+.content .opiniontext{
+    max-width: 220px;
+    /* margin-left: 29%; */
+    margin-left: 85px;
+}
+.content .opiniontext p{
+    font-size: 16px;
+    color: #3D1101;
+    line-height: 24px;
+}
+.content .opiniontext span{
+    display: block;
+    text-align: right;
+    font-size: 16px;
+    color: rgba(61,17,0,0.75);
+    line-height: 24px;
+    padding: 1em 0 50px 0;
+}
+@media (max-width: 768px){
+    .content .opinion ul{
+        padding: 0;
+    }
+}
+@media (max-width: 569px){
+    .content .opinion ul{
+        display: block;
+    }
+    .content .opinion li{
+        width: 100%;
+    }
+    .content .opinionperson{
+        justify-content: center;
+    }
+    .content .opiniontext{
+        max-width: 220px;
+        margin: 10px auto 0;
+    }
+}
+.content .reservation{
+    background-color: rgba(250,250,250,0.70);
+    padding-bottom: 50px;
+}
+.content .reservation p{
+    padding: 50px 0;
+    text-align: center;
+    font-size: 24px;
+    color: #3D1101;
+    line-height: 1.2;
+}
+.content .reservation ul{
+    padding: 0 2.5em;
+    display: flex;
+}
+.content .reservation li{
+    position: relative;
+    margin-right: 1%;
+    width: 50%;
+}
+#name, #phNum, #mail, #peoNum{
+    padding: 3px 0;
+    margin: 10px 0 12px 0;
+    width: 100%;
+}
+.content .reservation .map label{
+    font-size: 14px;
+    color: #3D1101;
+}
+.content .reservation .map label input{
+    margin: 10px 2.5em 0 0;
+}
+.content .reservation .map .delete{
+    font-size: 14px;
+    color: #FFFFFF;
+    background: rgba(0,0,0,0.35);
+    border-radius: 3px;
+    border: none;
+    padding: .3em 1em;
+    position: absolute;
+    right: 4.5em;
+    bottom: 0;
+    cursor: pointer;
+}
+.content .reservation .map .deliver{
+    font-size: 14px;
+    color: #FFFFFF;
+    background: #F56C23;
+    border-radius: 3px;
+    border: none;
+    padding: .3em 1em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .content .reservation ul{
+        padding: 0 1em;
+    }
+}
+@media (max-width: 569px){
+    .content .reservation{
+        padding-bottom: 20px;
+    }
+    .content .reservation ul{
+        display: block;
+    }
+    .content .reservation li{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .content .reservation li img{
+        width: 100%;
+    }
+}
+.footer{
+    display: flex;
+    background-color: #EFE9E7;
+    padding: 2.5em;
+}
+.footer div{
+    width: 33.3333%;
+}
+.footerabout h6, .footercontact h6{
+    font-size: 24px;
+    color: #3D1101;
+    padding-bottom: 1em;
+}
+.footerabout p, .footercontact p{
+    font-size: 16px;
+    color: #3D1101;
+}
+.footericon{
+    position: relative;
+}
+.footericon .logo{
+    float: right;
+}
+.footericon ul{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+.footericon ul li{
+    padding-left: .8em;
+}
+@media (max-width: 768px){
+    .footer{
+        padding: 1em;
+    }
+}
+@media (max-width: 569px){
+    .footer{
+        display: block;
+        padding-bottom: 130px;
+    }
+    .footer div{
+        width: 100%;
+    }
+    .footerabout, .footercontact{
+        padding-bottom: 2em;
+    }
+    .footericon .logo{
+        position: absolute;
+        top: 30px;
+        right: 0;
+        display: block;
+        float: none;
+        margin-right: 0px;
+    }
+    .footericon ul{
+        position: absolute;
+        right: 0;
+        bottom: -110px;
+    }
+}

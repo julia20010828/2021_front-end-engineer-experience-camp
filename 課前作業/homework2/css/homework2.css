@@ -1,0 +1,302 @@
+/* ----------css reset start---------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ----------css reset stop---------- */
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+.wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+.topbar{
+    background-color: #f6f6f6;
+}
+.topbar ul{
+	display: flex;
+	justify-content: flex-end;
+}
+.topbar a{
+	text-decoration: none;
+	display: block;
+	padding: 5px 10px;
+}
+.topbar .fb img{
+	width: 14px;
+	height: 14px;
+}
+.topbar .fb{
+	color: #4460a0;
+}
+.topbar .twitter{
+	color: #00aaec;
+	border-left: 1px solid gray;
+}
+.topbar a:hover{
+	color: white;
+}
+
+.header{
+    /* border: 1px solid black;  */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+	display: block;
+	padding-left: 20px;
+}
+.menu{
+    display: flex;
+}
+/* .menu li{
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid black;
+} */
+.menu li a{
+	width: 100px;
+    text-align: center;
+    /* background-color: #00ffa2; */
+    color: #00cc99;
+    display: block;
+	padding: 20px 0px;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+.menu li a:hover, .menu a.active{
+    /* background-color: #004466; */
+    /* color: #00ffa2; */
+    border-bottom: 3px solid #00cc99;
+}
+.dropdown-open{
+	display: none;
+}
+.topContent{
+	position: relative;
+	/* width: 1000px;
+	height: 346px; */
+	/* background-image: url(https://upload.cc/i1/2021/04/12/vlfKZR.png); */
+}
+.topContent p{
+	font-size: 35px;
+	color: white;
+	position: absolute;
+	left: 20px;
+	top: 138px;
+	/* padding: 138px 0 138px 20px; */
+}
+
+.mid1_content{
+	margin: 80px 0 20px 0;
+}
+.course{
+    display: flex;
+    justify-content: space-around;
+}
+.course-item{
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+	box-shadow: 0px 3px 3px lightgray;
+    width: 302px;
+}
+.course-item h2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.course-item p{
+    margin: 10px;
+    line-height: 1.5;
+}
+
+.mid2_content{
+	margin-bottom: 80px;
+}
+.mid2_content h3{
+	padding-top: 50px;
+	font-size: 25px;
+	text-align: center;
+}
+.compare{
+	width: 830px;
+	margin: 20px auto;
+}
+.compare tr{
+	padding: 5px;
+	font-size: 16px;
+}
+.compare th{
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #dddddd;
+	border-top: 1px solid #dddddd;
+	font-weight: bold;
+	text-align: left;
+	padding: 10px;
+}
+.compare td{
+	border-bottom: 1px solid #dddddd;
+	padding: 10px;
+	text-align: left;
+}
+.green{
+	color: #00a67d;
+}
+
+.bottomContent{
+	height: 405px;
+	background-image: url(https://upload.cc/i1/2021/04/06/SWzJMX.png);
+	margin-bottom: 50px;
+}
+.bottomContent h3{
+	color: white;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 20px;
+	line-height: 1.5;
+}
+.write{
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 20px;
+}
+.info{
+	width: 460px;
+	background-color: white;
+	border-radius: 3px;
+}
+.write label{
+	color: white;
+}
+.write form{
+	width: 460px;
+}
+.write form input{
+	width: 460px;	
+	height: 30px;
+	border-radius: 3px;
+	margin-top: 3px;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	border: 0px;
+}
+.write form .submit{
+	width: 70px;
+	float: right;
+	cursor: pointer;
+	color: white;
+	background-color: #00cc99;
+}
+
+.footer{
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0px 60px;
+	padding: 0px 20px;
+}
+.footer a{
+	text-decoration: none;
+	line-height: 1.5;
+	color: #e12d80;
+}
+
+.top{
+	position: fixed;
+	right: 259.6px;
+	bottom: 5px;
+	border-radius: 50%;
+	background-color: #00a67d;
+	text-align: center;
+	line-height: 80px;
+	width: 80px;
+	height: 80px;
+}
+.top a{
+	text-decoration: none;
+	font-size: 26px;
+	color: white;
+}
+
+/* swiper CSS */
+.swiper-container {
+	width: 1000px;
+	height: 346px;
+	/* width: 618px;
+	height: 246px; */
+}
+.swiper-slide img{
+	width: 1000px;
+	height: 346px;
+}
+  
+/* lightbox CSS */
+.lightboxOverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: skyblue;
+	filter: alpha(Opacity=80);
+	opacity: 0.8;
+	display: none;
+}
+.lb-data .lb-caption {
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1em;
+	display: none !important;
+}
+.lb-data .lb-number {
+	display: block;
+	clear: left;
+	padding-bottom: 1em;
+	font-size: 12px;
+	color: black;
+}

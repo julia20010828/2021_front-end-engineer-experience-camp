@@ -1,0 +1,299 @@
+/* ----------css reset start---------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ----------css reset stop---------- */
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.wrap{
+    margin: 0 auto;
+    max-width: 1024px;
+}
+.header{
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 420px;
+    background-image: url(https://upload.cc/i1/2021/06/26/kLciSX.png);
+}
+.header .topbar{
+    background: rgba(0,0,0,0.75);
+    padding: 0 2.5em;
+    display: flex;
+    justify-content: space-between;
+}
+.topbar .menu{
+    display: flex;
+}
+.topbar .menu a{
+    padding: 18px 1em;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.header .showmenu{
+    display: none;
+}
+.header .topcontent{
+    text-align: center;
+    margin: 67px auto 0 auto;
+    max-width: 460px;
+    background: rgba(0,0,0,0.35);
+}
+.topcontent h1{
+    padding: 20px 0;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+.topcontent p{
+    line-height: 1.3;
+    padding-bottom: 20px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+@media (max-width: 569px){
+    .header{
+        background-image: url(https://upload.cc/i1/2021/06/27/EQdVm8.png);
+    }
+    .header .topbar{
+        padding: 0 1em;
+    }
+    .header .menu {
+        /*隱藏選單開始*/
+        max-height: 0px;
+        overflow: hidden;
+        /*隱藏選單結束*/
+        transition: max-height 2.3s;
+        margin-top: 1px;
+        /*絕對定位疊在網頁上*/
+        position: absolute;
+        z-index: 100;
+        /*header 80px+1px boder 線條*/
+        top: 47px;
+        left: 0;
+        right: 0;
+        background: #FFFFFF;
+    }
+    .topbar .menu{
+        display: block;
+    }
+    .header .menu li{
+        /* float: none; */
+        border-bottom: 1px dashed #0F222B;
+    }
+    .header .menu li a{
+        color: #0F222B;
+        transition: all 0.3s;
+    }
+    .header .menu li a:hover{
+        background: #69CA62;
+        color: #fff;
+    }
+    .header .showmenu{
+        display: block;
+        float: right;
+        margin: 1em;        
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    /*jQ點擊後動態在 body 加上 class */
+    .menu-show .menu{
+        max-height: 500px
+    }
+}
+.content{
+    background-color: #EFE9E7;
+    padding: 50px 0;
+}
+.content .title{
+    text-align: center; 
+}
+.content h3{
+    margin-top: 5px;
+    font-weight: bold;
+    font-family: NotoSansCJKtc-Medium;
+    font-size: 20px;
+    color: #3D1101;
+}
+.content .login_signup{
+    border-top: 3px solid #FF5E45;
+    box-shadow: 3px 3px 3px lightgray;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 35px;
+    padding: 15px;
+}
+.content .login_signup p{
+    font-family: NotoSansCJKtc-Black;
+    font-size: 18px;
+    color: #3D1101;
+    text-align: center;
+}
+.content .login_signup label{
+    margin: 16px 0 3px;
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    color: #3D1101;
+    display: block;
+}
+.content .login_signup input{
+    padding: 5px;
+    box-shadow: inset 2px 2px 2px lightgray;
+    width: 100%;
+    border: none;
+}
+.content .login_signup a{
+    margin: 5px 0 30px;
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 14px;
+    color: #FF5E45;
+    display: block;
+}
+.content .login_signup .signup{
+    font-family: PingFangTC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: rgba(0,0,0,0.35);
+    border-radius: 3px;
+    border: none;
+    padding: 6px 0;
+    margin-right: 2%;
+    width: 48%;
+    cursor: pointer;
+}
+.content .login_signup .login{
+    font-family: PingFangTC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: #F56C23;
+    border-radius: 3px;
+    border: none;
+    padding: 6px 0;
+    margin-left: 2%;
+    width: 48%;
+    float: right;
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .content .login_signup{
+        width: 50%;
+    }
+}
+@media (max-width: 569px){
+    .content .login_signup{
+        margin: 35px 5% 0;
+        width: 90%;
+    }
+}
+.footer{
+    display: flex;
+    background-color: #EFE9E7;
+    padding: 2.5em;
+}
+.footer div{
+    width: 33.3333%;
+}
+.footerabout h6, .footercontact h6{
+    font-size: 24px;
+    color: #3D1101;
+    padding-bottom: 1em;
+}
+.footerabout p, .footercontact p{
+    font-size: 16px;
+    color: #3D1101;
+}
+.footericon{
+    position: relative;
+}
+.footericon .logo{
+    float: right;
+}
+.footericon ul{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+.footericon ul li{
+    padding-left: .8em;
+}
+@media (max-width: 768px){
+    .footer{
+        padding: 1em;
+    }
+}
+@media (max-width: 569px){
+    .footer{
+        display: block;
+        padding-bottom: 130px;
+    }
+    .footer div{
+        width: 100%;
+    }
+    .footerabout, .footercontact{
+        padding-bottom: 2em;
+    }
+    .footericon .logo{
+        position: absolute;
+        top: 30px;
+        right: 0;
+        display: block;
+        float: none;
+        margin-right: 0px;
+    }
+    .footericon ul{
+        position: absolute;
+        right: 0;
+        bottom: -110px;
+    }
+}
